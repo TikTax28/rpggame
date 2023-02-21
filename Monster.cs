@@ -8,12 +8,12 @@ public class Monster
     public int RewardGold { get; set; }
 
 
-    public List<LootItem> LootTable { get; set; }
+    public List<Item> Loot { get; set; }
 
     internal List<InventoryItem> LootItems { get; }
 
     public Monster(int id, string name, string namePlural, int maximumDamage, int rewardExperiencePoints, int rewardGold, int currentHitPoints, int maximumHitPoints) 
-        : base(currentHitPoints, maximumHitPoints)
+        
     {
         ID = id;
         Name = name;
@@ -22,7 +22,7 @@ public class Monster
         RewardExperiencePoints = rewardExperiencePoints;
         RewardGold = rewardGold;
 
-        LootTable = new List<LootItem>();
+        Loot = new List<Item>();
 
         LootItems = new List<InventoryItem>();
     }

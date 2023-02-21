@@ -1,4 +1,4 @@
-public class PlayerQuest : INotifyPropertyChanged
+public class PlayerQuest
 {
     private Quest _details;
     private bool _isCompleted;
@@ -9,7 +9,6 @@ public class PlayerQuest : INotifyPropertyChanged
         set
         {
             _details = value;
-            OnPropertyChanged("Details");
         }
     }
 
@@ -19,8 +18,6 @@ public class PlayerQuest : INotifyPropertyChanged
         set
         {
             _isCompleted = value;
-            OnPropertyChanged("IsCompleted");
-            OnPropertyChanged("Name");
         }
     }
 
@@ -33,16 +30,6 @@ public class PlayerQuest : INotifyPropertyChanged
     {
         Details = details;
         IsCompleted = false;
-    }
-
-    public event PropertyChangedEventHandler PropertyChanged;
-
-    protected void OnPropertyChanged(string name)
-    {
-        if(PropertyChanged != null)
-        {
-            PropertyChanged(this, new PropertyChangedEventArgs(name));
-        }
     }
 }
 
