@@ -66,34 +66,38 @@ public static class World
 
     public static void PopulateMonsters()
     {
+        
         Monster rat = new Monster(MONSTER_ID_RAT, "rat", "rats", 5, 3, 10, 3, 3);
-        rat.Loot.AddItem(ItemByID(ITEM_ID_RAT_TAIL));
-        rat.Loot.AddItem(ItemByID(ITEM_ID_PIECE_OF_FUR));
+        
+        rat.Loot.Add(ItemByID(ITEM_ID_RAT_TAIL));
+        rat.Loot.Add(ItemByID(ITEM_ID_PIECE_OF_FUR));
 
         Monster snake = new Monster(MONSTER_ID_SNAKE, "snake", "snakes", 5, 4, 20, 7, 7);
-        snake.Loot.AddItem(ItemByID(ITEM_ID_SNAKE_FANG));
-        snake.Loot.AddItem(ItemByID(ITEM_ID_SNAKESKIN));
+        snake.Loot.Add(ItemByID(ITEM_ID_SNAKE_FANG));
+        snake.Loot.Add(ItemByID(ITEM_ID_SNAKESKIN));
 
         Monster giantSpider = new Monster(MONSTER_ID_GIANT_SPIDER, "giant spider", "giant spiders", 5, 5, 30, 10, 10);
-        giantSpider.Loot.AddItem(ItemByID(ITEM_ID_SPIDER_FANG));
-        giantSpider.Loot.AddItem(ItemByID(ITEM_ID_SPIDER_SILK));
+        giantSpider.Loot.Add(ItemByID(ITEM_ID_SPIDER_FANG));
+        giantSpider.Loot.Add(ItemByID(ITEM_ID_SPIDER_SILK));
 
         Monsters.Add(rat);
         Monsters.Add(snake);
         Monsters.Add(giantSpider);
+        
     }
 
     public static void PopulateQuests()
     {
+        
         Quest clearAlchemistGarden =
             new Quest(
                 QUEST_ID_CLEAR_ALCHEMIST_GARDEN,
                 "Clear the alchemist's garden",
                 "Kill rats in the alchemist's garden ", 20, 10,
-                null,
-                WeaponByID(WEAPON_ID_CLUB));
+                WeaponByID(WEAPON_ID_CLUB),
+                null);
 
-        clearAlchemistGarden.QuestCompletionItems.AddCountedItem(new CountedItem(ItemByID(ITEM_ID_RAT_TAIL), 3));
+        clearAlchemistGarden.QuestCompletionItems.Add(new QuestItem(ItemByID(ITEM_ID_RAT_TAIL), 3));
 
         Quest clearFarmersField =
             new Quest(
@@ -103,7 +107,7 @@ public static class World
                 ItemByID(ITEM_ID_ADVENTURER_PASS),
                 null);
 
-        clearFarmersField.QuestCompletionItems.AddCountedItem(new CountedItem(ItemByID(ITEM_ID_SNAKE_FANG), 3));
+        clearFarmersField.QuestCompletionItems.Add(new QuestItem(ItemByID(ITEM_ID_SNAKE_FANG), 3));
 
         Quest clearSpidersForest =
                     new Quest(
@@ -113,11 +117,12 @@ public static class World
                         ItemByID(ITEM_ID_WINNERS_MEDAL),
                         null);
 
-        clearSpidersForest.QuestCompletionItems.AddCountedItem(new CountedItem(ItemByID(ITEM_ID_SPIDER_SILK), 3));
+        clearSpidersForest.QuestCompletionItems.Add(new QuestItem(ItemByID(ITEM_ID_SPIDER_SILK), 3));
 
         Quests.Add(clearAlchemistGarden);
         Quests.Add(clearFarmersField);
-        Quests.Add(clearSpidersForest);
+        Quests.Add(clearSpidersForest);      
+        
     }
 
     public static void PopulateLocations()

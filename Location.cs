@@ -6,7 +6,6 @@ public class Location
     public Item ItemRequiredToEnter { get; set; }
     public Quest QuestAvailableHere { get; set; }
     public Monster MonsterLivingHere { get; set; }
-    public Vendor VendorWorkingHere { get; set; }
     public Location LocationToNorth { get; set; }
     public Location LocationToEast { get; set; }
     public Location LocationToSouth { get; set; }
@@ -63,32 +62,3 @@ public class Location
     }
 }
 
-public class Player
-{
-    public Location CurrentLocation;
-    private int? Item_id_to_have;
-    public Player(Location currentLocation)
-    {
-        CurrentLocation = currentLocation;
-    }
-
-    public bool TryMoveTo(Location newLocation/*, int Item_id_to_have*/)
-    {
-        if (newLocation != null) //hieronder nog if statement om te checken voor adventurers pass.
-        {
-            if (CurrentLocation.Name == "Town square" && newLocation.Name == "Guard post" && Item_id_to_have == 7)
-            {
-                CurrentLocation = newLocation;
-                return true;
-            }
-            else if (CurrentLocation.Name == "Town square" && newLocation.Name == "Guard post" && Item_id_to_have != 7)
-            {
-                Console.WriteLine("You can't go here yet, maybe you should go to the farmer's field");
-                return false;
-            }
-            CurrentLocation = newLocation;
-            return true;
-        }
-        return false;
-    }
-}
