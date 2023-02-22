@@ -9,6 +9,7 @@ public class Program
         player.CurrentLocation = World.LocationByID(World.LOCATION_ID_HOME);
 
         InventoryItem starter_sword = new InventoryItem(rusty_sword, 1);
+        string confirmation = "";
         while(true)
             {
                 string player_wants_to_move = "Y";
@@ -24,12 +25,38 @@ public class Program
                     }
                     Console.WriteLine(player.CurrentLocation.Compass(player.CurrentLocation.Name));
                     string where_to_go = Console.ReadLine().ToUpper();
+                    if (where_to_go == "Q" || where_to_go == "QUIT" || where_to_go == "EXIT")
+                    {
+                        Console.WriteLine("Are you sure you want to quit? Y/N");
+                        confirmation = Console.ReadLine().ToUpper();
+                        if (confirmation == "Y")
+                        {
+                            Environment.Exit(0);
+                        }
+                        else
+                        {
+                            continue;
+                        }
+                    }
                     player.Item_id_to_have = 7;
                     player.TryMoveTo(player.CurrentLocation.GetLocationAt(where_to_go)/*, Item_id_to_have*/);
                     Console.WriteLine($"You are at: {player.CurrentLocation.Name}");
                     Console.WriteLine(player.CurrentLocation.Description);
                     Console.WriteLine("Move ? Y/N");
                     player_wants_to_move = Console.ReadLine().ToUpper();
+                    if (player_wants_to_move == "Q" || player_wants_to_move == "QUIT" || player_wants_to_move == "EXIT")
+                    {
+                        Console.WriteLine("Are you sure you want to quit? Y/N");
+                        confirmation = Console.ReadLine().ToUpper();
+                        if (confirmation == "Y")
+                        {
+                            Environment.Exit(0);
+                        }
+                        else
+                        {
+                            continue;
+                        }
+                    }
                 }
 
 
