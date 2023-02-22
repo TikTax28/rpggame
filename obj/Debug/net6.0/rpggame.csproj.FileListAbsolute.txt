@@ -1,0 +1,15 @@
+C:\Development\CSharp\Mini project rpg\rpggame\bin\Debug\net6.0\rpggame.exe
+C:\Development\CSharp\Mini project rpg\rpggame\bin\Debug\net6.0\rpggame.deps.json
+C:\Development\CSharp\Mini project rpg\rpggame\bin\Debug\net6.0\rpggame.runtimeconfig.json
+C:\Development\CSharp\Mini project rpg\rpggame\bin\Debug\net6.0\rpggame.dll
+C:\Development\CSharp\Mini project rpg\rpggame\bin\Debug\net6.0\rpggame.pdb
+C:\Development\CSharp\Mini project rpg\rpggame\obj\Debug\net6.0\rpggame.csproj.AssemblyReference.cache
+C:\Development\CSharp\Mini project rpg\rpggame\obj\Debug\net6.0\rpggame.GeneratedMSBuildEditorConfig.editorconfig
+C:\Development\CSharp\Mini project rpg\rpggame\obj\Debug\net6.0\rpggame.AssemblyInfoInputs.cache
+C:\Development\CSharp\Mini project rpg\rpggame\obj\Debug\net6.0\rpggame.AssemblyInfo.cs
+C:\Development\CSharp\Mini project rpg\rpggame\obj\Debug\net6.0\rpggame.csproj.CoreCompileInputs.cache
+C:\Development\CSharp\Mini project rpg\rpggame\obj\Debug\net6.0\rpggame.dll
+C:\Development\CSharp\Mini project rpg\rpggame\obj\Debug\net6.0\refint\rpggame.dll
+C:\Development\CSharp\Mini project rpg\rpggame\obj\Debug\net6.0\rpggame.pdb
+C:\Development\CSharp\Mini project rpg\rpggame\obj\Debug\net6.0\rpggame.genruntimeconfig.cache
+C:\Development\CSharp\Mini project rpg\rpggame\obj\Debug\net6.0\ref\rpggame.dll
