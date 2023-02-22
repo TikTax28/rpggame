@@ -4,9 +4,11 @@ public class Program
     {
         Player player = new Player(10, 10, 20, 0);
         Item hp_pot = new Item(1, "HP Pot", "Item for healing");
+        Item rusty_sword = new Item(2, "Rusty Sword", "Beginners Sword");
         player.Inventory.Add(new InventoryItem(World.ItemByID(World.WEAPON_ID_RUSTY_SWORD), 1));
         player.CurrentLocation = World.LocationByID(World.LOCATION_ID_HOME);
-    
+
+        InventoryItem starter_sword = new InventoryItem(rusty_sword, 1);
         while(true)
             {
                 string player_wants_to_move = "Y";
