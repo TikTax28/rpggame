@@ -3,6 +3,7 @@ public class Program
     public static void Main(string[] args)
     {
         Player player = new Player(10, 10, 20, 0);
+        Item hp_pot = new Item(1, "HP Pot", "Item for healing");
         player.Inventory.Add(new InventoryItem(World.ItemByID(World.WEAPON_ID_RUSTY_SWORD), 1));
         player.CurrentLocation = World.LocationByID(World.LOCATION_ID_HOME);
     
