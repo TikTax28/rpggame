@@ -18,6 +18,7 @@ public static class World
     public const int ITEM_ID_SPIDER_SILK = 6;
     public const int ITEM_ID_ADVENTURER_PASS = 7;
     public const int ITEM_ID_WINNERS_MEDAL = 8;
+    public const int ITEM_ID_HP_POT = 9;
 
     public const int MONSTER_ID_RAT = 1;
     public const int MONSTER_ID_SNAKE = 2;
@@ -56,6 +57,7 @@ public static class World
         Items.Add(new Item(ITEM_ID_SPIDER_SILK, "Spider silk", "Spider silks"));
         Items.Add(new Item(ITEM_ID_ADVENTURER_PASS, "Adventurer pass", "Adventurer passes"));
         Items.Add(new Item(ITEM_ID_WINNERS_MEDAL, "Winner's medal", "winner's medals"));
+        Items.Add(new Item(ITEM_ID_HP_POT, "HP Pot", "Item for healing"));
     }
 
     public static void PopulateWeapons()
