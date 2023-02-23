@@ -27,6 +27,64 @@ public class Program
                     player.CurrentHitPoints = player.MaximumHitPoints;
                 }
             }
+            if (player.CurrentLocation.ID == 4)
+            {
+                foreach (Quest quest in World.Quests)
+                {
+                    if (quest.ID == 1)
+                    {
+                        PlayerQuest KillRats = new PlayerQuest(quest);
+                        if (KillRats.IsCompleted == false)
+                        {
+                            Console.WriteLine("--- QUEST INFO ---");
+                            Console.WriteLine($"Quest Name: {quest.Name}");
+                            Console.WriteLine($"Quest Description: {quest.Description}");
+                            Console.WriteLine($"Quest Reward Experience: {quest.RewardExperiencePoints}");
+                            Console.WriteLine($"Quest Reward Gold: {quest.RewardGold}");
+                            Console.WriteLine("------------------");
+                        }
+                    }
+                }
+            }
+            else if (player.CurrentLocation.ID == 6)
+            {
+                foreach (Quest quest in World.Quests)
+                {
+                    if (quest.ID == 2)
+                    {
+                        PlayerQuest KillSnakes = new PlayerQuest(quest);
+                        if (KillSnakes.IsCompleted == false)
+                        {
+                            Console.WriteLine("--- QUEST INFO ---");
+                            Console.WriteLine($"Quest Name: {quest.Name}");
+                            Console.WriteLine($"Quest Description: {quest.Description}");
+                            Console.WriteLine($"Quest Reward Experience: {quest.RewardExperiencePoints}");
+                            Console.WriteLine($"Quest Reward Gold: {quest.RewardGold}");
+                            Console.WriteLine("------------------");
+                        }
+                    }
+                }
+            }
+            else if (player.CurrentLocation.ID == 8)
+            {
+                foreach (Quest quest in World.Quests)
+                {
+                    if (quest.ID == 3)
+                    {
+                        PlayerQuest KillSpider = new PlayerQuest(quest);
+                        if (KillSpider.IsCompleted == false)
+                        {
+                            Console.WriteLine("--- QUEST INFO ---");
+                            Console.WriteLine($"Quest Name: {quest.Name}");
+                            Console.WriteLine($"Quest Description: {quest.Description}");
+                            Console.WriteLine($"Quest Reward Experience: {quest.RewardExperiencePoints}");
+                            Console.WriteLine($"Quest Reward Gold: {quest.RewardGold}");
+                            Console.WriteLine("------------------");
+                        }
+                    }
+                }
+            }
+
             // RPG Menu
             Console.WriteLine($"You are at: {player.CurrentLocation.Name}");
             Console.WriteLine("What would you like to do (Enter a number)?");
